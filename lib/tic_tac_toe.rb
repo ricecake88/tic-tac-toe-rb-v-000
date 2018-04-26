@@ -132,5 +132,7 @@ def play(board)
    turn(board)  
    play(board)
  end
- if (won?(board))
+ if won?(board) && current_player == "X"
+   puts "Congratulations X!"
+ end
 end
