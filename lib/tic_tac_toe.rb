@@ -14,14 +14,6 @@ def valid_move?(board, index)
   end
 end
 
-def position_taken?(board, index)
-  if (board[index] == " " || board[index] == "" || board[index] == nil)
-    return false
-  else
-    return true
-  end
-end
-
 def move(board, index, value)
   if (valid_move?(board, index))
     board[index] = value
@@ -55,14 +47,6 @@ def turn(board)
       display_board(board)
   else turn(board)
   end
-end
-
-def display(board)
-  puts "   |   |   "
-  puts "-----------"
-  puts "   |   |   "
-  puts "-----------"
-  puts "   |   |   "
 end
 
 def position_taken?(board, index)
