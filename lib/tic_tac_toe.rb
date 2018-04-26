@@ -132,9 +132,8 @@ def play(board)
    turn(board)
    play(board)
  end
- if won?(board) != false && current_player(board) == "X"
-   puts "Congratulations X!"
- elsif won?(board) != false && current_player(board) == "O"
-   puts "Congratulations O!"   
+ if won?(board)
+   puts "Congratulations #{current_player(board)}!"
+ elsif draw?(board)
  end
 end
