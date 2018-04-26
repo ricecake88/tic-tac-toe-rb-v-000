@@ -53,7 +53,6 @@ def turn(board)
   if (num < 9 && num >= 0)
       move(board, num, current_player(board))
       display_board(board)
-    end
   else turn(board)
   end
 end
