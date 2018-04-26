@@ -34,14 +34,20 @@ end
 
 def first_turn(board)
   board.all? do |index|
-    if board[index] ==
+    board[index] == " "
+  end
+end
 
 def turn(board)
   puts "Please enter 1-9:"
   num = input_to_index(gets.strip)
   if (num < 9 && num >= 0)
-      move(board, num)
+    if first_turn(board)
+      move(board, num, "X")
+    else
+      move(board, num, "O")
       display_board(board)
+    end
   else turn(board)
   end
 end
