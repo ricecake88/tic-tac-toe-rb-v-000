@@ -32,10 +32,19 @@ def input_to_index(number)
   number.to_i-1
 end
 
-def first_turn(board)
-  board.all? do |index|
-    board[index] == " "
+def turn_count(board)
+  count = 0
+  board.each do |turn|
+    if (turn == "X" || turn == "O")
+      count += 1
+    end
   end
+  return count
+end
+
+def current_player(board)
+  count = turn_count(board)
+  return ((count % 2) == 0 || (count == 0)) ? "X" : "O"
 end
 
 def turn(board)
