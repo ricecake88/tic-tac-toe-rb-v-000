@@ -22,7 +22,7 @@ def position_taken?(board, index)
   end
 end
 
-def move(board, index, value="X")
+def move(board, index, value)
   if (valid_move?(board, index))
     board[index] = value
   end
