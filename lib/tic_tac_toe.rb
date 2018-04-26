@@ -32,6 +32,10 @@ def input_to_index(number)
   number.to_i-1
 end
 
+def first_turn(board)
+  board.all? do |index|
+    if board[index] ==
+
 def turn(board)
   puts "Please enter 1-9:"
   num = input_to_index(gets.strip)
