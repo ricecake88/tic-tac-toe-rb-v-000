@@ -128,5 +128,8 @@ end
 
 def play(board)
   while (!over(board))
-  play(board)
+   display_board(board)
+   turn(board)  
+   play(board)
+ end
 end
