@@ -51,10 +51,7 @@ def turn(board)
   puts "Please enter 1-9:"
   num = input_to_index(gets.strip)
   if (num < 9 && num >= 0)
-    if first_turn(board)
-      move(board, num, "X")
-    else
-      move(board, num, "O")
+      move(board, num, current_player(board))
       display_board(board)
     end
   else turn(board)
