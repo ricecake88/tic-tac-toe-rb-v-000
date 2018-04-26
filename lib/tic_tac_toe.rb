@@ -132,4 +132,5 @@ def play(board)
    turn(board)  
    play(board)
  end
+ if (won?(board))
 end
