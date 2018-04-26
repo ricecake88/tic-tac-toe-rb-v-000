@@ -129,10 +129,11 @@ end
 def play(board)
   while (!over?(board))
    display_board(board)
-   turn(board)  
+   turn(board)
+ if won?(board) && current_player == "X"
+   puts "Congratulations X!"   
    play(board)
  end
- if won?(board) && current_player == "X"
-   puts "Congratulations X!"
+
  end
 end
