@@ -134,7 +134,7 @@ def play(board)
  end
  if won?(board) != false && current_player(board) == "X"
    puts "Congratulations X!"
- else won?(board) != false && current_player(board) == "O"
+ elsif won?(board) != false && current_player(board) == "O"
    puts "Congratulations O!"   
  end
 end
